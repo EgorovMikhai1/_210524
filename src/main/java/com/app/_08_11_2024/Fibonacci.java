@@ -13,7 +13,7 @@ public class Fibonacci {
     }
 
     public static long getFibonacci(int i) {
-        int result = 0;
+        int result;
         int v1 = 0;
         int v2 = 1;
 
