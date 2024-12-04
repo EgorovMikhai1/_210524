@@ -9,11 +9,11 @@ public class JDBCexample {
         final String DB_URL = "jdbc:mysql://localhost:3306/libliblib";
         final String USER = "root";
         final String PASS = "123123";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        final String query = "SELECT * FROM authors";
 
-        Class.forName("com.mysql.jdbc.Driver");
         Connection connection = DriverManager.getConnection(DB_URL, USER, PASS);
         Statement statement = connection.createStatement();
-        String query = "SELECT * FROM authors";
         ResultSet resultSet = statement.executeQuery(query);
 
         while (resultSet.next()) {
